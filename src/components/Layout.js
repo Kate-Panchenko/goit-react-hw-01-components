@@ -8,5 +8,5 @@ export const theme = {
     black: "#161616",
     grey: "#686868",
     accent: "#DBDBDB",
-
+    font: "Inter",
 }
