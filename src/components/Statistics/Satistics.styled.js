@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Statistic = styled.section`
     background-color: ${props => props.theme.bcg};
     align-items: center;
+    margin-bottom: 32px;
 `
 export const Title = styled.h2`
     text-align: center;
