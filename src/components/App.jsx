@@ -1,12 +1,15 @@
 import { Profile } from "./Profile/Profile";
 import user from '../data/user.json';
+import { GlobalStyle } from "./GlobalStyle";
+import { Layout } from "./Layout";
 
 // console.log(user);
 
 
 export const App = () => {
   return (
-    <div>
+    <Layout>
+      <GlobalStyle/>
       <Profile
       username={user.username}
       tag={user.tag}
@@ -14,6 +17,6 @@ export const App = () => {
       avatar={user.avatar}
       stats={user.stats}
       />
-    </div> 
+    </Layout>
   );
 };

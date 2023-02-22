@@ -1,5 +1,7 @@
+import { theme } from 'components/Layout';
 import PropTypes from 'prop-types';
-
+import { ThemeProvider } from 'styled-components';
+import { Description, UserProfile, Image, Info } from './Profile.styled';
 
 export const Profile = ({
     username,
@@ -7,13 +9,14 @@ export const Profile = ({
     location,
     avatar,
     stats: { followers, views, likes }}) => {
-    return <div>
-        <div>
-            <img src={avatar} alt="User avatar" />
-            <p>{ username }</p>
-            <p>@{ tag }</p>
+    return <ThemeProvider theme={theme}>
+        <UserProfile>
+        <Description>
+            <Image src={avatar} alt="User avatar" />
+            <Info>{ username }</Info>
+            <Info>@{ tag }</Info>
             <p>{ location }</p>
-        </div>
+        </Description>
         <ul>
             <li>
                 <span>Followers</span>
@@ -28,7 +31,8 @@ export const Profile = ({
                 <span>{ likes }</span>
             </li>
         </ul>
-    </div>
+    </UserProfile>
+    </ThemeProvider>   
 }
     
 Profile.prototype = {
@@ -40,5 +44,5 @@ Profile.prototype = {
         followers: PropTypes.number,
         views: PropTypes.number,
         likes: PropTypes.number,
-    }),
+    }).isRequired,
 }
