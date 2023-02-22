@@ -6,6 +6,7 @@ export const List = styled.ul`
     gap: 12px;
     background-color: ${props => props.theme.bcg};
     padding: 10px;
+    margin-bottom: 32px;
 `
 export const Friend = styled.li`
     display: flex;
