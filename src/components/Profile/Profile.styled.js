@@ -6,9 +6,7 @@ export const UserProfile = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 375px;
-    margin-right: auto;
-    margin-left: auto;
+    margin-bottom: 32px;
     padding-bottom: 32px;
 `
 
@@ -61,7 +59,7 @@ export const Stat = styled.li`
 export const StatName = styled.span`
 `
 
-export const StatValue = styled.span`
+export const Value = styled.span`
     font-weight: 600;
     font-size: 16px;
     line-height: 1.25;

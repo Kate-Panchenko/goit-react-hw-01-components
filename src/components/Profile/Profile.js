@@ -1,7 +1,7 @@
 import { theme } from 'components/Layout';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
-import { Description, UserProfile, Image, Info, Username, Stats, Stat, StatName, StatValue } from './Profile.styled';
+import { Description, UserProfile, Image, Info, Username, Stats, Stat, StatName, Value } from './Profile.styled';
 
 export const Profile = ({
     username,
@@ -20,15 +20,15 @@ export const Profile = ({
         <Stats>
             <Stat>
                 <StatName>Followers</StatName>
-                <StatValue>{ followers }</StatValue>
+                <Value>{ followers }</Value>
             </Stat>
             <Stat>
                 <StatName>Views</StatName>
-                <StatValue>{ views }</StatValue>
+                <Value>{ views }</Value>
             </Stat>
             <Stat>
                 <StatName>Likes</StatName>
-                <StatValue>{ likes }</StatValue>
+                <Value>{ likes }</Value>
             </Stat>
         </Stats>
     </UserProfile>
